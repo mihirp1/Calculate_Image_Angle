@@ -12,7 +12,7 @@ import sys                                        #Used for accepting commadnlin
 def find_correction_angle(input_csv_file):
  list_of_grid_elements = []
  main_list = []
- updated_csv_file = input_csv_file + '_updated.csv'
+ updated_csv_file = input_csv_file.split('.csv')[0] + '_updated.csv'
  
  with open(input_csv_file, 'r') as f:               #Nested Context Manager for reading original CSV File
   with open(updated_csv_file, 'w') as f_new:
@@ -55,7 +55,7 @@ def find_correction_angle(input_csv_file):
    temp_lowest_col_cc_row = black_pixel[0]
    Y2, X2 = temp_lowest_col_cc_row, temp_lowest_col    #Point with lowest column co-ordinate (x co-ordinate)
 
- slope = (Y2-Y1)/(X2-X1)                             #Calculating Slope from two leftmost points
+ slope = (Y2 - Y1) / (X2 - X1)                         #Calculating Slope from two leftmost points
  '''
  Since we are considering always the lowest column and highest row, we are always looking at the edge of the rectangle with the positive slope, 
  As a result, rotation is always Clockwise and angle always positive 
