@@ -7,14 +7,14 @@ if __name__ == "__main__":
  list_of_grid_elements = []
  main_list = []
  
- with open('rotated.csv','r') as f:
-    with open("rotated_updated.csv",'w') as f1:
+ with open('rotated_1.csv','r') as f:
+    with open("rotated_updated_1.csv",'w') as f1:
         f.readline() # skip header line
         for line in f:
             f1.write(line) 
 
 
- with open('rotated_updated.csv', 'r') as f:
+ with open('rotated_updated_1.csv', 'r') as f:
   reader = csv.reader(f)
   for row_number,column in enumerate(reader):
    #if(row_number != 0):
@@ -130,4 +130,5 @@ if __name__ == "__main__":
 
  #Since we are considering always the lowest column and highest row, rotation is always Clockwise 
 
- print(math.degrees(math.atan(-188/140)) * -1) 
+ #print(math.degrees(math.atan(slope)) * -1) 
+ print(math.degrees(math.atan(slope)))
