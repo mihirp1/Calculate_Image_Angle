@@ -1,0 +1,2 @@
+#Please execute script as following by passing CSV file as command line argument :
+python image_rotate_angle.py <name_of_input_file.csv> 
